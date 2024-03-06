@@ -60,9 +60,11 @@ body {
     border-bottom: 4px solid var(--verde);
     }
     
-.abas-textos{
-    background-color: var(--texto-fundo);
-}
+.botao.ativo{
+        background-color: var(--botao-ativo);
+        border-bottom: 4px solid var(--verde);
+    }
+    
 
 @media screen and (min-width: 768px) {
     .botoes {
