@@ -5,9 +5,9 @@ for (let i = 0; i < botoes.length; j++) {
     botoes[i].onclick = function () {
 
         for (let j = 0; j < botoes.length; j++) {
-            botoes[j].classList.remove("ativo");
+            botao[j].classList.remove("ativo");
         }
-        botoes[i].classList.add("ativo");
+        botao[i].classList.add("ativo");
     }
 }
 const contadores = document.querySelectorAll(".contador");
