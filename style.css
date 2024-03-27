@@ -68,7 +68,7 @@ body {
 }
 
 .abas-textos {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--texto-fundo);
     /*Cor de fundo*/
     padding: 40px;
     /*Espaço intrno*/
