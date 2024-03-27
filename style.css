@@ -61,9 +61,15 @@ body {
 .botao {
     display: block;
 }
-.ativo{
+
+.botao .ativo{
 background-color: var(--botao-ativo);
 border-bottom: 4px solid var(--verde);
+}
+
+.abas-textos{
+    background-color: var(--cor-de-fundo);
+    padding: 40px;
 }
 
 @media screen and (min-width: 768px) {
