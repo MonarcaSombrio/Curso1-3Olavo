@@ -1,44 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap');
 
-:root {
-    --cor-de-fundo: #000000;
+:root{
+    --cor-de-fundo:#1E1E1E;
     --verde: #6FFF57;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.5);
+    --branco:#FFFFFF;
+    --botao-ativo:#3A375E;
+    --botao-inativo:rgba(58,55,94,0.5);
+    --texto-fundo:rgba(58,55,94,0.3);
 }
-
-body {
+body{
     background-color: var(--cor-de-fundo);
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
 }
 
-.conteudo-principal {
-
+.conteudo-principal{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
-.titulo-principal {
+.titulo-principal{
     text-align: left;
     width: 100%;
     font-size: 32px;
 }
 
-.titulo-principal span {
-    color: var(--verde);
+.titulo-principal span{
+    color: var(--verde);   
 }
 
-.botao {
-
-    font-family: 'Chakra Petch', sans-serif;
+.botao{
+    font-family: "Chakra Petch", sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -51,37 +48,29 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
-
 }
 
-.botao:first-child {
-    border-radius: 40px 40px 0 0;
-}
-
-.botao {
+.botoes{
     display: block;
 }
 
-.botao .ativo {
+.botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 }
 
-.abas-textos {
+.abas-textos{
     background-color: var(--texto-fundo);
-    /*Cor de fundo*/
     padding: 40px;
-    /*Espaço intrno*/
     border-radius: 0 0 40px 40px;
-    /*Arrendodamento dos cantos*/
 }
 
-.aba-conteudo.ativo {
-    display: block;
+.aba-conteudo.ativo{
+    display:block;
 }
 
-.aba-conteuddo {
-    display: none;
+.aba-conteudo{
+display: none;
 }
 
 .aba-conteudo-titulo-principal{
@@ -90,24 +79,25 @@ body {
 }
 
 .aba-conteudo-titulo-secundario{
-    text-align: center;/*Alinha o texto ao centro*/
-    color: var(--verde);/*Cor do texto*/
-    text-transform: uppercase;/*Deixa o texto em maiúculo*/
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
 }
 
-
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
 
 @media screen and (min-width: 768px) {
-
-    .botoes {
-        display: flex;
+    .botoes{
+        display:flex;
     }
+    
+}
 
-    .botao:first-child {
-        border-radius: 40px 0 0 0;
-    }
-
-    .botao:last-child {
-        border-radius: 0 40px 0 0;
-    }
+.botao:first-child{
+    border-radius: 40px 0 0 0;
+}
+.botao:last-child{
+    border-radius: 0 40px 0 0;
 }
