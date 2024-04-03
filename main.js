@@ -22,7 +22,13 @@ const tempoObjetivo1 = new date("2024-10-05T00:00:00");
 contadores[0].textContent = calculaTempo(tempoObjetivo1);
 
 function calculaTempo(tempoObjetivo1) {
+
     let tempoAtual = new date();
+    let tempoFinal = tempoObjetivo1 - tempoAtual;
+    let segundos = Math.floor(tempoFinal / 1000);
+    let minutos = Math.floor(tempoFinal / 60);
+    let horas = Math.floor(tempoFinal / 60);
+    let dias = Math.floor(tempoFinal / 24);
 
-
+    return dias;
 }
