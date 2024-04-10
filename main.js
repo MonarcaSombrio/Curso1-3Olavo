@@ -30,5 +30,5 @@ function calculaTempo(tempoObjetivo1) {
     let horas = Math.floor(tempoFinal / 60);
     let dias = Math.floor(tempoFinal / 24);
 
-    return dias;
+    return dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"
 }
