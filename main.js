@@ -28,8 +28,12 @@ function atualizaCronometro() {
         contadores[i] textContent = calculaTempo(tempos[i]);
     }
 }
+function atualizaCronometro() {
+    atualizaCronometro();
+    setInterval(atualizaCronometro, 1000);
+}
 
-setInterval(atualizaCronometro, 1000);
+comecaCronometro();
 
 for (let x = 0; x < contadores.length; x++) {
     contadores[x].textContent = calculaTempo(tempos[x]);
