@@ -1,45 +1,43 @@
-const botoes = document.querySelectorAll(".botao");
-const textos = document.querySelectorAll(".aba-conteudo");
+const botoes = document.querySelectorAll(".botao");//variável que armazena todos os itens com a classe botão
+const textos = document.querySelectorAll(".aba-conteudo");//variável que armazena todos os itens com a classe aba-conteudo
 
-for (let i = 0; 1 < botoes.length; i++) {
-    botoes[i].onclick = function () {
+for (let i = 0; i < botoes.length; i++) {// loop que executa enquanto i<quantidade de botoes
 
-        for (let j = 0; j < botoes.length; j++) {
-            botoes[j].classList.remove("ativo");
-            textos[j].classList.remove("ativo");
+    botoes[i].onclick = function () { //cria uma função 
+
+        for (let j = 0; j < botoes.length; j++) { // loop que executa enquanto j<quantidade de botoes
+            botoes[j].classList.remove("ativo");  //remove a palavra ativo da classe.
+            textos[j].classList.remove("ativo");  //remove a palavra ativo da classe.
         }
-
-        botoes[i].classList.add("ativo");
-        textos[i].classList.add("ativo");
+        botoes[i].classList.add("ativo");//adiciona a palavra ativo da classe.
+        textos[i].classList.add("ativo");//adiciona a palavra ativo da classe.
     }
 
 }
-
 const contadores = document.querySelectorAll(".contador");
 
-const tempoObjetivo1 = new date("2024-10-05T00:00:00");
-const tempoObjetivo2 = new date("2024-10-05T00:00:00");
-const tempoObjetivo3 = new date("2024-10-05T00:00:00");
-const tempoObjetivo4 = new date("2024-10-05T00:00:00");
+const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
+const tempoObjetivo2 = new Date("2024-10-05T00:00:00");
+const tempoObjetivo3 = new Date("2024-10-05T00:00:00");
+const tempoObjetivo4 = new Date("2024-10-05T00:00:00");
 
-contadores[0].textContent = calculaTempo(tempoObjetivo1);
-contadores[1].textContent = calculaTempo(tempoObjetivo2);
-contadores[2].textContent = calculaTempo(tempoObjetivo3);
-contadores[3].textContent = calculaTempo(tempoObjetivo4);
+const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
 
-function calculaTempo(tempoObjetivo1) {
+for (let x = 0; x < contadores.length; x++) {
+    contadores[x].textContent = calculaTempo(tempos[x]);
+}
 
-    let tempoAtual = new date();
-    let tempoFinal = tempoObjetivo1 - tempoAtual;
+
+function calculaTempo(tempoObjetivo) {
+    let tempoAtual = new Date();
+    let tempoFinal = tempoObjetivo - tempoAtual;
     let segundos = Math.floor(tempoFinal / 1000);
-    let minutos = Math.floor(tempoFinal / 60);
-    let horas = Math.floor(tempoFinal / 60);
-    let dias = Math.floor(tempoFinal / 24);
-
+    let minutos = Math.floor(segundos / 60);
+    let horas = Math.floor(minutos / 60);
+    let dias = Math.floor(horas / 24);
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
-
-    return [dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"];
+    return [dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos"];
     //print(dias);
 }
